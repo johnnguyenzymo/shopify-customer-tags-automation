@@ -33,6 +33,6 @@ To setup your app:
 apiKeyStaging="<API key>" # enter the value without brackets
 apiSecretStaging="<API secret key>" # enter the value without brackets
 accessTokenStaging="<Admin API access token>" # enter the value without brackets
-# basicAuthStaging format will be apiKeyStaging:apiSecretStaging encoded in base64
+// basicAuthStaging format will be apiKeyStaging:apiSecretStaging encoded in base64
 basicAuthStaging="<basicAuthStagingEncodedInBase64>" # enter the value without brackets
 ```
