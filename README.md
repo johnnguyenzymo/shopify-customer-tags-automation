@@ -13,7 +13,7 @@ In this example, this app:
 
 After git cloning this project and running `npm install`, you will need to create a .env file that contains the API credentials of your app.  
 
-To generate your credentials:
+#### Generating your credentials:
 
 1. From the shopify admin panel if the store you need access to, click **Apps** > **App and sales channel settings** > **Develop apps** > **Create an app**
     - If you do not see **Develop apps**, you will need to update your Shopify user account's store access.  Please reach out to the Shopify Platform Manager and ask to be granted permission to **Manage and install apps and channels**.
@@ -25,14 +25,20 @@ To generate your credentials:
 -  API key
 -  API secret key
 
-To setup your app: 
+#### Adding credentials to your app:
 
 6. In the project folder, refer to the `.env.example` file and create a new `.env` file, and add your credentials like so (this assumes you created your app for the staging website):
 
 ```
-apiKeyStaging="<API key>" # enter the value without brackets
-apiSecretStaging="<API secret key>" # enter the value without brackets
-accessTokenStaging="<Admin API access token>" # enter the value without brackets
+apiKeyStaging="<API key>" // enter the value without brackets
+apiSecretStaging="<API secret key>" // enter the value without brackets
+accessTokenStaging="<Admin API access token>" // enter the value without brackets
 // basicAuthStaging format will be apiKeyStaging:apiSecretStaging encoded in base64
-basicAuthStaging="<basicAuthStagingEncodedInBase64>" # enter the value without brackets
+basicAuthStaging="<basicAuthStagingEncodedInBase64>" // enter the value without brackets
 ```
+
+#### Running your app:
+
+7. On line 97 of `index.js`, please enter the list of customerIds as an array
+8. In the for loop at the bottom of `index.js`, pass either `stageCredentials` or `prodCredentials` as a string as the first argument.
+9. In your terminal, run the command `node index.js`.  
