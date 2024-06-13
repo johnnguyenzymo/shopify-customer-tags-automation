@@ -30,8 +30,9 @@ To setup your app:
 6. In the project folder, refer to the `.env.example` file and create a new `.env` file, and add your credentials like so (this assumes you created your app for the staging website):
 
 ```
-apiKeyStaging="<API key>" // enter the value without brackets
-apiSecretStaging="<API secret key>" // enter the value without brackets
-accessTokenStaging="<Admin API access token>" // enter the value without brackets
-
+apiKeyStaging="<API key>" # enter the value without brackets
+apiSecretStaging="<API secret key>" # enter the value without brackets
+accessTokenStaging="<Admin API access token>" # enter the value without brackets
+# basicAuthStaging format will be apiKeyStaging:apiSecretStaging encoded in base64
+basicAuthStaging="<basicAuthStagingEncodedInBase64>" # enter the value without brackets
 ```
